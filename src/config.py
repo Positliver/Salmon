@@ -38,7 +38,7 @@ MOST_DAYS_CHIGU = 5  # 触发割肉 超过5天必须持股天数
 
 
 INITIAL_MONEY= 100000  # 初始资金
-CHICANG_BILIE_EXCEPT_BUCANG = 0.8  # 持仓比例， 新买入股票时使用， 补仓不使用
+CHICANG_BILIE_EXCEPT_BUCANG = 0.5  # 持仓比例， 新买入股票时使用， 补仓不使用
 
 DATE_START = '2013-01-01'
 DATE_END = '2013-2-01'

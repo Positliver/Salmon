@@ -129,10 +129,9 @@ def start():
                 moneyInStock += number*close_price_today
                     
         print("$$$当前总资金：",myfund.myCash+moneyInStock, " 现金余额：",myfund.myCash," 当前股票市值：",moneyInStock,"\n\n")
-  
-    currentFund(allstock, myfund, config.DATE_END)
+    currentFund(allstock, myfund, config.DATE_END, moneyInStock)
 
-def currentFund(allstock, myfund, day):   
+def currentFund(allstock, myfund, day, moneyInStock):   
     result = 0
     for eachStock in allstock :
         
@@ -151,7 +150,9 @@ def currentFund(allstock, myfund, day):
             result += eachStock.holdingStockStatus.totalFund
         if eachStock.holdingStockStatus.number != 0 :
             result -= eachStock.holdingStockStatus.number*(eachStock.pretodayDataFrame['close'])
-    print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$result:",result, ",myCash:",myfund.myCash)
-        
+
+    print("##########################################################################################################") 
+    print("The End, 现金:", myfund.myCash , ", 股票:", moneyInStock, ", 结余:", -result, ", 初始资金:",config.INITIAL_MONEY)
+    print("##########################################################################################################") 
 if __name__ == '__main__':
     start()

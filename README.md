@@ -2,8 +2,8 @@
 this project for three man 
 
 ## test project:
- >cd src     
- >$python3 manager.py
+ >$ cd src     
+ >$ python3 manager.py
  
 ## configuration：
- >cat src/config.py
+ >$ cat src/config.py
